@@ -100,6 +100,7 @@ export default function Resources() {
         ) : (
           filteredGenres.map((card) => (
             <motion.div 
+            key={card.id}
             custom={card.id}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -109,7 +110,6 @@ export default function Resources() {
             }}
             >
                 <Card
-                key={card.id}
                 image={card.image}
                 title={card.title}
                 description={card.description}
