@@ -1,99 +1,96 @@
 "use client"
-import React, { useEffect, useState } from "react";
-import Card from "./component/Card";
+import {motion} from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function Home() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [filteredGenres, setFilteredGenres] = useState<Array<{
-    id: number;
-    image: string;
-    title: string;
-    description: string;
-    color: string;
-    link: string;
-  }>>([]);
+export default function Home(){
 
-  const genres = [
-    {
-      id: 1,
-      image: '/mystery.png',
-      title: 'Mystery',
-      description: 'Solving puzzles and crimes.',
-      color: '#080A0B',
-      link: 'https://drive.google.com/drive/folders/1gVLW9gZiKUr1tHtt_FzjqiE7LeXQaybi'
+  const fadeInAnimationVariants = { // for framer motion  
+    initial: {
+        opacity: 0,
+        y: 100,
     },
-    {
-      id: 2,
-      image: '/science fiction.png',
-      title: 'Fiction',
-      description: 'Imagining futuristic and otherworldly scenarios.',
-      color: '#7C9DB2',
-      link: 'https://drive.google.com/drive/folders/1gTA1QbeGQXeECn0zDP55_EXE7cmtHaBd'
-    },
-    {
-      id: 3,
-      image: '/fantasy.png',
-      title: 'Fantasy',
-      description: 'Exploring magical realms and mythical creatures.',
-      color: '#215A8E',
-      link: 'https://drive.google.com/drive/folders/1gQfkOn9gWQYgujEUtdOWlOJBw6WjNmf3'
-    },
-    {
-      id: 4,
-      image: '/adventure.png',
-      title: 'Adventure',
-      description: 'Keeping readers in suspense with high tension.',
-      color: '#161C1E',
-      link: 'https://drive.google.com/drive/folders/1gEXluPDX3etDuVAjJS7jTiHqSAUR2lj7'
-    },
-    {
-      id: 5,
-      image: '/biography.png',
-      title: 'Biography',
-      description: 'Tells the reader about a person.',
-      color: '#161C1E',
-      link: 'https://drive.google.com/drive/folders/1gFZltkqwFEbtLgXIQ7EAg6oUZx-C90Mv'
-    },
-  ];
+    animate: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.05 * index,
+        }
+    })
+  }
 
-  useEffect(() => {
-    const filtered = genres.filter((genre) =>
-      genre.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredGenres(filtered);
-  }, [searchQuery]);
+  const scaleInAnimationVariants = { // for framer motion  
+    initial: {
+        opacity: 0,
+    },
+    animate: (index: number) => ({
+        opacity: 1,
 
-  return (
-    <>
-      <div className="pt-10 px-10">
-        <h1 className="text-2xl font-semibold">Books</h1>
-        <p className="text-[#898989]">{genres.length} Genres</p>
-        <div>
-          <input
-            placeholder="Search for genres"
-            className="outline-none border border-[#E3E3E3] my-2 placeholder:text-[#C0C0C0] rounded-full px-4 py-2 w-full"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-      </div>
+        transition: {
+            delay: 0.1 * index,
+        }
+    })
+  }
 
-      <div className="flex p-10 gap-5 flex-wrap">
-        {filteredGenres.length === 0 ? (
-          <p>No results found.</p>
-        ) : (
-          filteredGenres.map((card) => (
-            <Card
-              key={card.id}
-              image={card.image}
-              title={card.title}
-              description={card.description}
-              color={card.color}
-              link={card.link}
-            />
-          ))
-        )}
-      </div>
-    </>
-  );
+  return(
+    <div className="flex flex-col p-12 items-center">
+      <motion.h1 className="text-9xl font-clash w-[700px] text-center"
+        custom={1}
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >Read A Lot</motion.h1>
+      <motion.p className="text-[#4B5A6C] text-2xl my-4 text-center"
+        custom={2}
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+        once: true,
+        }}
+      >A reader lives a thousand lives before he dies.<br /> The man who never reads lives only one.</motion.p>
+      <motion.div
+        custom={3}
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <Link href={'/resources'}>
+          <button className='contact-us'>
+            Get Reading
+          </button>
+        </Link>
+      </motion.div>
+
+      <motion.div
+        custom={4}
+        variants={scaleInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <Image src={'/svg/reading.svg'} alt='Reading' width={300} height={0} className='absolute bottom-0 left-0 m-10'/>
+      </motion.div>
+
+      <motion.div
+        custom={5}
+        variants={scaleInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <Image src={'/svg/bookshelf.svg'} alt='Reading' width={300} height={0} className='absolute bottom-0 right-0 m-10'/>
+      </motion.div>
+    </div>
+  )
 }
