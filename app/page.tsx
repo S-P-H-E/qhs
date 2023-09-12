@@ -20,15 +20,15 @@ export default function Home() {
       title: 'Mystery',
       description: 'Solving puzzles and crimes.',
       color: '#080A0B',
-      link: 'https://google.com'
+      link: 'https://drive.google.com/drive/folders/1gVLW9gZiKUr1tHtt_FzjqiE7LeXQaybi'
     },
     {
       id: 2,
       image: '/science fiction.png',
-      title: 'Science Fiction',
+      title: 'Fiction',
       description: 'Imagining futuristic and otherworldly scenarios.',
       color: '#7C9DB2',
-      link: 'https://google.com'
+      link: 'https://drive.google.com/drive/folders/1gTA1QbeGQXeECn0zDP55_EXE7cmtHaBd'
     },
     {
       id: 3,
@@ -36,15 +36,23 @@ export default function Home() {
       title: 'Fantasy',
       description: 'Exploring magical realms and mythical creatures.',
       color: '#215A8E',
-      link: 'https://google.com'
+      link: 'https://drive.google.com/drive/folders/1gQfkOn9gWQYgujEUtdOWlOJBw6WjNmf3'
     },
     {
       id: 4,
-      image: '/thriller.png',
-      title: 'Thriller',
+      image: '/adventure.png',
+      title: 'Adventure',
       description: 'Keeping readers in suspense with high tension.',
       color: '#161C1E',
-      link: 'https://google.com'
+      link: 'https://drive.google.com/drive/folders/1gEXluPDX3etDuVAjJS7jTiHqSAUR2lj7'
+    },
+    {
+      id: 5,
+      image: '/biography.png',
+      title: 'Biography',
+      description: 'Tells the reader about a person.',
+      color: '#161C1E',
+      link: 'https://drive.google.com/drive/folders/1gFZltkqwFEbtLgXIQ7EAg6oUZx-C90Mv'
     },
   ];
 
