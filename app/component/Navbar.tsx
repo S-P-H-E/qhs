@@ -35,6 +35,7 @@ export default function Navbar() {
     <div className="p-8 flex justify-between items-center">
       <div className='w-full'>
         <BiSolidBook size={30} />
+        
       </div>
       <div className='flex justify-center items-center gap-8 w-full'>
         {routes.map((route) => (

@@ -5,8 +5,8 @@
 
 
 *{
-  --highlight: #232C34;
-  --bg: #FFFFFF;
+  --highlight: #1A3433;
+  --bg: #CCB58A;
 }
 
 body{
@@ -17,16 +17,16 @@ body{
 
 .gradient-01 {
   background-image: linear-gradient(
-    200deg,
-    #232C34 0%,
-    #ffffff 26%,
-    #232C34 39%,
-    #ffffff 50%,
-    #232C34 61%,
-    #ffffff 74%,
-    #232C34 100%
+    270deg,
+    #FCDEF2 0%,
+    #FCDEF2 26%,
+    #FCDEF2 39%,
+    #FCDEF2 50%,
+    #D7D0E9 61%,
+    #FEEEDE 74%,
+    #D7D0E9 100%
   );
-  filter: blur(20px);
+  filter: blur(125px);
 }
 
 .contact-us {

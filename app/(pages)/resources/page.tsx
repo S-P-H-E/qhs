@@ -83,11 +83,11 @@ export default function Resources() {
       <div className="px-10">
         {/* <h1 className="text-2xl font-semibold">Books</h1>
         <p className="text-[#898989]">{genres.length} Genres</p> */}
-        <div className="border border-[#E3E3E3] my-2 rounded-full px-4 py-2 w-full flex items-center gap-2">
-            <BiSearch className={'text-[#C0C0C0]'}/>
+        <div className="border border-[--highlight] my-2 rounded-full px-4 py-2 w-full flex items-center gap-2">
+            <BiSearch className={'text-[--highlight]'}/>
             <input
                 placeholder="Search for genres"
-                className="outline-none placeholder:text-[#C0C0C0] w-full"
+                className="outline-none bg-transparent placeholder:text-[#1A3433]/50 w-full"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />

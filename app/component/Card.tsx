@@ -21,7 +21,7 @@ export default function Card({ image, title, description, color, link }: CardPro
   };
 
   return (
-    <Link href={link} target="_blank" className="relative text-white flex items-end cursor-pointer transition-all md:hover:scale-105 active:scale-90">
+    <Link href={link} target="_blank" className="shadow-xl rounded-2xl relative text-white flex items-end cursor-pointer transition-all md:hover:scale-105 active:scale-90">
       <Image
         src={image}
         alt={title}
