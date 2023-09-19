@@ -29,20 +29,20 @@ export default function About(){
                 }}
             >
                 <h1 className="font-clash text-3xl w-full text-center mb-2">About Us</h1>
-                <p className='leading-9 text-[1.2rem]'>
-                Read a lot.com is Queensburgh High School&apos;s Digital Bookshelf.<br />
-                Our aim is to recommit ourselves to the cause of literacy, so that its transformative power
-                may be accessible to everyone.
-                With this in mind, we have created the convenience of carrying an entire library in your
-                pocket. It allows for portability, meaning you can take your entire collection with you,
-                wherever you go.
-                You may be an avid reader looking to connect with others who share your passion or you
-                may be someone looking to improve your English language skills; in reading, listening,
-                speaking and writing.
-                Whether you prefer adventure or mystery, romance or biographies, there will surely be
-                something you will enjoy.
-                So go ahead, dive into the world of words and experience new places and people.
-                </p>
+                <div className='leading-9 text-[1.2rem]'>
+                Read a lot.com is Queensburgh High School’s online library of free electronic books or eBooks, which you can download or read online. 
+The mission of Read a lot.com is to: 
+<ul>
+    <li>- promote literacy and a love of reading by offering access to free books and literature.</li>
+    <li>- promote personal development and growth. </li>
+    <li>- foster a sense of community and collaboration among users.</li>
+    <li>- bridge the digital divide by providing open access, regardless of one’s geographical location. </li>
+</ul>	
+With this in mind, we have created the convenience of carrying a library in your pocket. It allows for portability, meaning that you can take your collection along with you, wherever you go. 
+So go ahead, dive into the world of words and experience new places and people. 
+‘Our job is to read things that are not yet on the page’ - Steve Jobs
+
+                </div>
             </motion.div>
         </div>
     )
